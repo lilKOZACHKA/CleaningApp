@@ -1,7 +1,7 @@
 import sys
 import PySide6.QtCore
 from PySide6.QtWidgets import QDialog, QApplication
-from AuthorizationDialog import Ui_AuthorizationDiolog
+from ui.AuthorizationDialog import Ui_AuthorizationDiolog
 
 class Admitistrator(QDialog):
     def __init__(self):
