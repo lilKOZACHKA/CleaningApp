@@ -1,3 +1,13 @@
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading UI file 'AutorizationDialogbGiqYM.ui'
+##
+## Created by: Qt User Interface Compiler version 6.8.3
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
+
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QMetaObject, QObject, QPoint, QRect,
     QSize, QTime, QUrl, Qt)
@@ -9,14 +19,14 @@ from PySide6.QtWidgets import (QApplication, QDialog, QGridLayout, QLabel,
     QPlainTextEdit, QPushButton, QSizePolicy, QSpacerItem,
     QVBoxLayout, QWidget)
 
-class Ui_AuthorizationDiolog(object):
-    def setupUi(self, AuthorizationDiolog):
-        if not AuthorizationDiolog.objectName():
-            AuthorizationDiolog.setObjectName(u"AuthorizationDiolog")
-        AuthorizationDiolog.resize(281, 384)
-        self.gridLayout = QGridLayout(AuthorizationDiolog)
+class Ui_AutorizationDiolog(object):
+    def setupUi(self, AutorizationDiolog):
+        if not AutorizationDiolog.objectName():
+            AutorizationDiolog.setObjectName(u"AutorizationDiolog")
+        AutorizationDiolog.resize(281, 384)
+        self.gridLayout = QGridLayout(AutorizationDiolog)
         self.gridLayout.setObjectName(u"gridLayout")
-        self.widget = QWidget(AuthorizationDiolog)
+        self.widget = QWidget(AutorizationDiolog)
         self.widget.setObjectName(u"widget")
         self.gridLayout_2 = QGridLayout(self.widget)
         self.gridLayout_2.setObjectName(u"gridLayout_2")
@@ -39,7 +49,7 @@ class Ui_AuthorizationDiolog(object):
 
         self.verticalLayout_2.addWidget(self.head)
 
-        self.verticalSpacer_2 = QSpacerItem(20, 16, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Preferred)
+        self.verticalSpacer_2 = QSpacerItem(20, 26, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Preferred)
 
         self.verticalLayout_2.addItem(self.verticalSpacer_2)
 
@@ -53,10 +63,11 @@ class Ui_AuthorizationDiolog(object):
         self.password_input = QPlainTextEdit(self.widget_2)
         self.password_input.setObjectName(u"password_input")
         self.password_input.setMaximumSize(QSize(400, 25))
+        self.password_input.setOverwriteMode(True)
 
         self.verticalLayout_2.addWidget(self.password_input)
 
-        self.verticalSpacer_4 = QSpacerItem(20, 16, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Preferred)
+        self.verticalSpacer_4 = QSpacerItem(20, 25, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Preferred)
 
         self.verticalLayout_2.addItem(self.verticalSpacer_4)
 
@@ -65,12 +76,7 @@ class Ui_AuthorizationDiolog(object):
 
         self.verticalLayout_2.addWidget(self.login_button)
 
-        self.registration_button = QPushButton(self.widget_2)
-        self.registration_button.setObjectName(u"registration_button")
-
-        self.verticalLayout_2.addWidget(self.registration_button)
-
-        self.verticalSpacer = QSpacerItem(20, 60, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+        self.verticalSpacer = QSpacerItem(20, 70, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_2.addItem(self.verticalSpacer)
 
@@ -85,18 +91,17 @@ class Ui_AuthorizationDiolog(object):
         self.gridLayout.addWidget(self.widget, 0, 0, 1, 1)
 
 
-        self.retranslateUi(AuthorizationDiolog)
+        self.retranslateUi(AutorizationDiolog)
 
-        QMetaObject.connectSlotsByName(AuthorizationDiolog)
+        QMetaObject.connectSlotsByName(AutorizationDiolog)
     # setupUi
 
-    def retranslateUi(self, AuthorizationDiolog):
-        AuthorizationDiolog.setWindowTitle(QCoreApplication.translate("AuthorizationDiolog", u"Dialog", None))
-        self.head.setText(QCoreApplication.translate("AuthorizationDiolog", u"\u0410\u0432\u0442\u043e\u0440\u0438\u0437\u0430\u0446\u0438\u044f", None))
+    def retranslateUi(self, AutorizationDiolog):
+        AutorizationDiolog.setWindowTitle(QCoreApplication.translate("AutorizationDiolog", u"\u0410\u0432\u0442\u043e\u0440\u0438\u0437\u0430\u0446\u0438\u044f", None))
+        self.head.setText(QCoreApplication.translate("AutorizationDiolog", u"\u0410\u0432\u0442\u043e\u0440\u0438\u0437\u0430\u0446\u0438\u044f", None))
         self.login_input.setPlainText("")
-        self.login_input.setPlaceholderText(QCoreApplication.translate("AuthorizationDiolog", u"\u041b\u043e\u0433\u0438\u043d", None))
-        self.password_input.setPlaceholderText(QCoreApplication.translate("AuthorizationDiolog", u"\u041f\u0430\u0440\u043e\u043b\u044c", None))
-        self.login_button.setText(QCoreApplication.translate("AuthorizationDiolog", u"\u0412\u043e\u0439\u0442\u0438 \u0432 \u043a\u0430\u0431\u0438\u043d\u0435\u0442", None))
-        self.registration_button.setText(QCoreApplication.translate("AuthorizationDiolog", u"\u0417\u0430\u0440\u0435\u0433\u0435\u0441\u0442\u0440\u0438\u0440\u043e\u0432\u0430\u0442\u044c\u0441\u044f", None))
+        self.login_input.setPlaceholderText(QCoreApplication.translate("AutorizationDiolog", u"\u041b\u043e\u0433\u0438\u043d", None))
+        self.password_input.setPlaceholderText(QCoreApplication.translate("AutorizationDiolog", u"\u041f\u0430\u0440\u043e\u043b\u044c", None))
+        self.login_button.setText(QCoreApplication.translate("AutorizationDiolog", u"\u0412\u043e\u0439\u0442\u0438 \u0432 \u043a\u0430\u0431\u0438\u043d\u0435\u0442", None))
     # retranslateUi
 

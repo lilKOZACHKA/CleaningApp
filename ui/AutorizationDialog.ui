@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>AuthorizationDiolog</class>
- <widget class="QDialog" name="AuthorizationDiolog">
+ <class>AutorizationDiolog</class>
+ <widget class="QDialog" name="AutorizationDiolog">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -107,6 +107,9 @@
              <width>400</width>
              <height>25</height>
             </size>
+           </property>
+           <property name="overwriteMode">
+            <bool>true</bool>
            </property>
            <property name="placeholderText">
             <string>Пароль</string>
