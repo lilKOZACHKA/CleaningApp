@@ -25,7 +25,7 @@ class Authorization(QDialog):
         status_code = hand.key_autorization(login, passw)
 
         if status_code == 0:
-            status_code = hand.check_user_type(login)
+            status_code = hand.key_check_user_type(login)
             self.success_dialog(status_code)
         elif status_code == 1:
             self.incorrect_dialog()
@@ -65,7 +65,7 @@ class Authorization(QDialog):
     def confirm_and_switch_panel(self, status_code, window):
         if status_code == 0:
             self.open_admin_panel(window)
-        if status_code == 1:
+        else:
             self.open_user_panel(window)
 
     def open_user_panel(self, window):

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'AdminDialogzZHAuK.ui'
+## Form generated from reading UI file 'AdminDialogtxOVPM.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.3
 ##
@@ -15,17 +15,18 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QDialog, QGridLayout, QHBoxLayout,
-    QHeaderView, QPushButton, QSizePolicy, QSpacerItem,
-    QTabWidget, QTableView, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QAbstractItemView, QApplication, QDialog, QGridLayout,
+    QHBoxLayout, QHeaderView, QPushButton, QSizePolicy,
+    QSpacerItem, QTabWidget, QTableWidget, QTableWidgetItem,
+    QVBoxLayout, QWidget)
 
 class Ui_AdminDialog(object):
     def setupUi(self, AdminDialog):
         if not AdminDialog.objectName():
             AdminDialog.setObjectName(u"AdminDialog")
-        AdminDialog.resize(749, 573)
-        self.verticalLayout = QVBoxLayout(AdminDialog)
-        self.verticalLayout.setObjectName(u"verticalLayout")
+        AdminDialog.resize(780, 573)
+        self.gridLayout = QGridLayout(AdminDialog)
+        self.gridLayout.setObjectName(u"gridLayout")
         self.widget = QWidget(AdminDialog)
         self.widget.setObjectName(u"widget")
         self.verticalLayout_2 = QVBoxLayout(self.widget)
@@ -38,38 +39,58 @@ class Ui_AdminDialog(object):
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.widget_2 = QWidget(self.tab)
         self.widget_2.setObjectName(u"widget_2")
-        self.verticalLayout_3 = QVBoxLayout(self.widget_2)
-        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
-        self.pushButton = QPushButton(self.widget_2)
-        self.pushButton.setObjectName(u"pushButton")
+        self.verticalLayout = QVBoxLayout(self.widget_2)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.add_new_user_button = QPushButton(self.widget_2)
+        self.add_new_user_button.setObjectName(u"add_new_user_button")
 
-        self.verticalLayout_3.addWidget(self.pushButton)
+        self.verticalLayout.addWidget(self.add_new_user_button)
 
-        self.pushButton_2 = QPushButton(self.widget_2)
-        self.pushButton_2.setObjectName(u"pushButton_2")
+        self.change_user_button = QPushButton(self.widget_2)
+        self.change_user_button.setObjectName(u"change_user_button")
 
-        self.verticalLayout_3.addWidget(self.pushButton_2)
+        self.verticalLayout.addWidget(self.change_user_button)
 
-        self.pushButton_3 = QPushButton(self.widget_2)
-        self.pushButton_3.setObjectName(u"pushButton_3")
+        self.del_user_button = QPushButton(self.widget_2)
+        self.del_user_button.setObjectName(u"del_user_button")
 
-        self.verticalLayout_3.addWidget(self.pushButton_3)
+        self.verticalLayout.addWidget(self.del_user_button)
 
         self.verticalSpacer_2 = QSpacerItem(20, 336, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
-        self.verticalLayout_3.addItem(self.verticalSpacer_2)
+        self.verticalLayout.addItem(self.verticalSpacer_2)
+
+        self.refresh_tablet_button = QPushButton(self.widget_2)
+        self.refresh_tablet_button.setObjectName(u"refresh_tablet_button")
+
+        self.verticalLayout.addWidget(self.refresh_tablet_button)
 
 
         self.horizontalLayout.addWidget(self.widget_2)
 
         self.widget_3 = QWidget(self.tab)
         self.widget_3.setObjectName(u"widget_3")
-        self.gridLayout = QGridLayout(self.widget_3)
-        self.gridLayout.setObjectName(u"gridLayout")
-        self.tableView = QTableView(self.widget_3)
-        self.tableView.setObjectName(u"tableView")
+        self.verticalLayout_4 = QVBoxLayout(self.widget_3)
+        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+        self.tableWidget = QTableWidget(self.widget_3)
+        if (self.tableWidget.columnCount() < 6):
+            self.tableWidget.setColumnCount(6)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        __qtablewidgetitem4 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(4, __qtablewidgetitem4)
+        __qtablewidgetitem5 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(5, __qtablewidgetitem5)
+        self.tableWidget.setObjectName(u"tableWidget")
+        self.tableWidget.setEditTriggers(QAbstractItemView.NoEditTriggers)
 
-        self.gridLayout.addWidget(self.tableView, 0, 0, 1, 1)
+        self.verticalLayout_4.addWidget(self.tableWidget)
 
 
         self.horizontalLayout.addWidget(self.widget_3)
@@ -86,7 +107,7 @@ class Ui_AdminDialog(object):
         self.verticalLayout_2.addItem(self.verticalSpacer)
 
 
-        self.verticalLayout.addWidget(self.widget)
+        self.gridLayout.addWidget(self.widget, 0, 0, 1, 1)
 
 
         self.retranslateUi(AdminDialog)
@@ -96,9 +117,22 @@ class Ui_AdminDialog(object):
 
     def retranslateUi(self, AdminDialog):
         AdminDialog.setWindowTitle(QCoreApplication.translate("AdminDialog", u"\u0410\u0434\u043c\u0438\u043d", None))
-        self.pushButton.setText(QCoreApplication.translate("AdminDialog", u"\u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c", None))
-        self.pushButton_2.setText(QCoreApplication.translate("AdminDialog", u"\u0423\u0434\u0430\u043b\u0438\u0442\u044c", None))
-        self.pushButton_3.setText(QCoreApplication.translate("AdminDialog", u"\u0418\u0437\u043c\u0435\u043d\u0438\u0442\u044c", None))
+        self.add_new_user_button.setText(QCoreApplication.translate("AdminDialog", u"\u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c", None))
+        self.change_user_button.setText(QCoreApplication.translate("AdminDialog", u"\u0418\u0437\u043c\u0435\u043d\u0438\u0442\u044c", None))
+        self.del_user_button.setText(QCoreApplication.translate("AdminDialog", u"\u0423\u0434\u0430\u043b\u0438\u0442\u044c", None))
+        self.refresh_tablet_button.setText(QCoreApplication.translate("AdminDialog", u"\u041e\u0431\u043d\u043e\u0432\u0438\u0442\u044c", None))
+        ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("AdminDialog", u"account_id", None));
+        ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("AdminDialog", u"username", None));
+        ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("AdminDialog", u"password_hash", None));
+        ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("AdminDialog", u"role", None));
+        ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(4)
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("AdminDialog", u"status", None));
+        ___qtablewidgetitem5 = self.tableWidget.horizontalHeaderItem(5)
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("AdminDialog", u"login_attempts", None));
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QCoreApplication.translate("AdminDialog", u"\u041f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0438", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("AdminDialog", u"Tab 2", None))
     # retranslateUi

@@ -24,7 +24,7 @@ class UserPanel(QDialog):
         if new_passw != old_passw:
             if len(new_passw) >= 8:
                 if new_passw == conf_new_passw:
-                    status_code = hand.change_user_password(old_passw, new_passw, conf_new_passw)
+                    status_code = hand.key_change_user_password(old_passw, new_passw, conf_new_passw)
                     if status_code == 3:
                         self.incorrect_dialog("Старый пароль не совпадает, проверьте его")
                     if status_code == 2:

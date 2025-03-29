@@ -32,7 +32,7 @@ class Handler():
         conn.close()
         return 1
     
-    def check_user_type(handler, login):
+    def key_check_user_type(handler, login):
         conn = sqlite3.connect('database.db')
         cur = conn.cursor()
 
@@ -52,7 +52,7 @@ class Handler():
         conn.close()
         return 2
             
-    def change_user_password(handler, old_passw, new_passw, conf_new_passw):
+    def key_change_user_password(handler, old_passw, new_passw, conf_new_passw):
         conn = sqlite3.connect('database.db')
         cur = conn.cursor()
 
@@ -83,7 +83,29 @@ class Handler():
         else:
             cur.close()
             conn.close()
+            
+    
+    def key_add_new_user(handler, username, passw, role):
+        conn = sqlite3.connect('database.db')
+        cur = conn.cursor()
+
+        if len(username) > 3 and len(username) < 50:
+            if len(passw) >= 8:
+                if role == "admin" or role == "manager" or role == "staff" or role == "client":
+                    cur.execute("INSERT INTO accounts (username, password_hash, role) VALUES (?, ?, ?)", (username, passw, role,))
+                    conn.commit()
+                    cur.close()
+                    conn.close()
+                    return 0
+                else:
+                    return 1
+            else:
+                return 2
+        else:
             return 3
+
+
+
 
 
     

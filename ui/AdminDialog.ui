@@ -6,15 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>749</width>
+    <width>780</width>
     <height>573</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Админ</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
-   <item>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
     <widget class="QWidget" name="widget" native="true">
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
@@ -26,25 +26,25 @@
          <layout class="QHBoxLayout" name="horizontalLayout">
           <item>
            <widget class="QWidget" name="widget_2" native="true">
-            <layout class="QVBoxLayout" name="verticalLayout_3">
+            <layout class="QVBoxLayout" name="verticalLayout">
              <item>
-              <widget class="QPushButton" name="pushButton">
+              <widget class="QPushButton" name="add_new_user_button">
                <property name="text">
                 <string>Добавить</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_2">
+              <widget class="QPushButton" name="change_user_button">
                <property name="text">
-                <string>Удалить</string>
+                <string>Изменить</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_3">
+              <widget class="QPushButton" name="del_user_button">
                <property name="text">
-                <string>Изменить</string>
+                <string>Удалить</string>
                </property>
               </widget>
              </item>
@@ -61,14 +61,55 @@
                </property>
               </spacer>
              </item>
+             <item>
+              <widget class="QPushButton" name="refresh_tablet_button">
+               <property name="text">
+                <string>Обновить</string>
+               </property>
+              </widget>
+             </item>
             </layout>
            </widget>
           </item>
           <item>
            <widget class="QWidget" name="widget_3" native="true">
-            <layout class="QGridLayout" name="gridLayout">
-             <item row="0" column="0">
-              <widget class="QTableView" name="tableView"/>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <item>
+              <widget class="QTableWidget" name="tableWidget">
+               <property name="editTriggers">
+                <set>QAbstractItemView::NoEditTriggers</set>
+               </property>
+               <column>
+                <property name="text">
+                 <string>account_id</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>username</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>password_hash</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>role</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>status</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>login_attempts</string>
+                </property>
+               </column>
+              </widget>
              </item>
             </layout>
            </widget>

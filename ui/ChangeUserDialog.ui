@@ -7,16 +7,16 @@
     <x>0</x>
     <y>0</y>
     <width>323</width>
-    <height>300</height>
+    <height>267</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Изменение пользователя</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
-   <item>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
     <widget class="QWidget" name="widget" native="true">
-     <layout class="QVBoxLayout" name="verticalLayout_2">
+     <layout class="QVBoxLayout" name="verticalLayout">
       <item>
        <widget class="QLabel" name="label">
         <property name="maximumSize">
@@ -88,6 +88,22 @@
         </property>
         <property name="placeholderText">
          <string>Роль</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPlainTextEdit" name="new_status_input">
+        <property name="maximumSize">
+         <size>
+          <width>400</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="tabStopWidth">
+         <number>90</number>
+        </property>
+        <property name="placeholderText">
+         <string>Статус</string>
         </property>
        </widget>
       </item>
