@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'ChangePassDialogoLOAoR.ui'
+## Form generated from reading UI file 'ChangePassDialogHGpayR.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.3
 ##
@@ -23,11 +23,19 @@ class Ui_ChangePassDialog(object):
     def setupUi(self, ChangePassDialog):
         if not ChangePassDialog.objectName():
             ChangePassDialog.setObjectName(u"ChangePassDialog")
-        ChangePassDialog.resize(289, 277)
+        ChangePassDialog.resize(289, 275)
+        ChangePassDialog.setStyleSheet(u"background-color:qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(81, 0, 135, 255), stop:0.427447 rgba(41, 61, 132, 235), stop:1 rgba(155, 79, 165, 255));\n"
+"\n"
+"border: 1px solid  rgba(255, 255, 255, 90);\n"
+"border-radius: 7px;")
         self.verticalLayout = QVBoxLayout(ChangePassDialog)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.widget = QWidget(ChangePassDialog)
         self.widget.setObjectName(u"widget")
+        self.widget.setStyleSheet(u"background-color: rgba(255, 255, 255, 60);\n"
+"color: white;\n"
+"font-weight: bold;\n"
+"font-size: 10pt;")
         self.verticalLayout_2 = QVBoxLayout(self.widget)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.label = QLabel(self.widget)
@@ -44,18 +52,24 @@ class Ui_ChangePassDialog(object):
         self.old_password_input = QPlainTextEdit(self.widget)
         self.old_password_input.setObjectName(u"old_password_input")
         self.old_password_input.setMaximumSize(QSize(400, 25))
+        self.old_password_input.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.old_password_input.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
         self.verticalLayout_2.addWidget(self.old_password_input)
 
         self.new_password_input = QPlainTextEdit(self.widget)
         self.new_password_input.setObjectName(u"new_password_input")
         self.new_password_input.setMaximumSize(QSize(400, 25))
+        self.new_password_input.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.new_password_input.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
         self.verticalLayout_2.addWidget(self.new_password_input)
 
         self.validate_password_input = QPlainTextEdit(self.widget)
         self.validate_password_input.setObjectName(u"validate_password_input")
         self.validate_password_input.setMaximumSize(QSize(400, 25))
+        self.validate_password_input.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.validate_password_input.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
         self.verticalLayout_2.addWidget(self.validate_password_input)
 

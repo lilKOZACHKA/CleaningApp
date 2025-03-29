@@ -13,12 +13,29 @@
   <property name="windowTitle">
    <string>Забанен</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(81, 0, 135, 255), stop:0.427447 rgba(41, 61, 132, 235), stop:1 rgba(155, 79, 165, 255));
+
+</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <widget class="QWidget" name="widget" native="true">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255, 60);
+border: 1px solid  rgba(255, 255, 255, 90);
+border-radius: 7px;</string>
+     </property>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
        <widget class="QLabel" name="label">
+        <property name="styleSheet">
+         <string notr="true">color: white;
+font-weight: bold;
+font-size: 10pt;
+border: none;
+background: none;</string>
+        </property>
         <property name="text">
          <string>В данный момент вы забанены, обратитесь к администратору</string>
         </property>
@@ -35,6 +52,12 @@
       </item>
       <item>
        <widget class="QWidget" name="widget_2" native="true">
+        <property name="styleSheet">
+         <string notr="true">color: white;
+font-weight: bold;
+font-size: 10pt;
+border-radius: 7px;</string>
+        </property>
         <layout class="QHBoxLayout" name="horizontalLayout">
          <property name="spacing">
           <number>0</number>
@@ -58,6 +81,9 @@
              <width>25</width>
              <height>30</height>
             </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Ок</string>

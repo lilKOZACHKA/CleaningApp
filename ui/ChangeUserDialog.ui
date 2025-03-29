@@ -13,9 +13,21 @@
   <property name="windowTitle">
    <string>Изменение пользователя</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(81, 0, 135, 255), stop:0.427447 rgba(41, 61, 132, 235), stop:1 rgba(155, 79, 165, 255));
+
+border: 1px solid  rgba(255, 255, 255, 90);
+border-radius: 7px;</string>
+  </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
     <widget class="QWidget" name="widget" native="true">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255, 60);
+color: white;
+font-weight: bold;
+font-size: 10pt;</string>
+     </property>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
        <widget class="QLabel" name="label">
@@ -57,6 +69,12 @@
           <height>25</height>
          </size>
         </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
         <property name="placeholderText">
          <string>Имя пользователя</string>
         </property>
@@ -70,6 +88,12 @@
           <height>25</height>
          </size>
         </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
         <property name="placeholderText">
          <string>Пароль</string>
         </property>
@@ -82,6 +106,12 @@
           <width>400</width>
           <height>25</height>
          </size>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
         </property>
         <property name="tabStopWidth">
          <number>90</number>
@@ -98,6 +128,12 @@
           <width>400</width>
           <height>25</height>
          </size>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
         </property>
         <property name="tabStopWidth">
          <number>90</number>
