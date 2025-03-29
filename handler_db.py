@@ -103,8 +103,43 @@ class Handler():
                 return 2
         else:
             return 3
+        
+    def key_change_current_user(handler, id, username, passw, role, status):
+        conn = sqlite3.connect('database.db')
+        cur = conn.cursor()
 
+        cur.execute("SELECT * FROM Accounts WHERE account_id = ?", (id,))
+        user_data = cur.fetchone()
 
+        if len(username) > 3 and len(username) < 50:
+            if len(passw) >= 8:
+                if role == "admin" or role == "manager" or role == "staff" or role == "client": 
+                    cur.execute("UPDATE Accounts SET username = ?, password_hash = ?, role = ?, account_status = ? WHERE account_id = ?", (username, passw, role, status, id,))
+                    conn.commit()
+                    cur.close()
+                    conn.close()
+                    return 0
+                else:
+                    return 1
+            else:
+                return 2
+        else:
+            return 3
+        
+    def key_del_current_user(handler, id):
+        conn = sqlite3.connect('database.db')
+        cur = conn.cursor()
+
+        cur.execute("DELETE FROM Accounts WHERE account_id = ?", (id,))
+        cur.execute("SELECT * FROM Accounts ORDER BY account_id")
+        all_accounts = cur.fetchall()
+        cur.execute("DELETE FROM Accounts")
+        for new_id, account in enumerate(all_accounts, start=1):
+            cur.execute("INSERT INTO Accounts (account_id, username, password_hash, role, account_status, login_attempts) VALUES (?, ?, ?, ?, ?, ?)", (new_id, *account[1:]))
+            conn.commit()
+        cur.close()
+        conn.close()
+        
 
 
 

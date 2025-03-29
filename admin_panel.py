@@ -36,8 +36,6 @@ class AdminPanel(QDialog):
             for col_num, data in enumerate(r_data):
                 self.admin_ui.tableWidget.setItem(r_num, col_num, QTableWidgetItem(str(data)))
 
-
-
     def add_new_user_dialog(self):
         add_user_window = QWidget()
         ui = Ui_AddUserDialog()
@@ -80,18 +78,47 @@ class AdminPanel(QDialog):
     def change_user_data(self, ui):
         from handler_db import Handler
         hand = Handler()
-        id = self.admin_ui.tableWidget.takeItem(self.admin_ui.tableWidget.currentRow(), 1)
+        id = self.admin_ui.tableWidget.currentRow() + 1
         username = ui.new_username_input.toPlainText()
         passw = ui.new_password_input.toPlainText()
         role = ui.new_role_input.toPlainText()
         status = ui.new_status_input.toPlainText()
         status_code = 0
 
+        status_code = hand.key_change_current_user(id, username, passw, role, status)
+
+        if status_code == 0:
+            self.success_dialog('Еее')
+        if status_code == 1:
+            self.incorrect_dialog("Роли могут состоять из admin, manager, staff, client")
+        if status_code == 2:
+            self.incorrect_dialog("Пароль должен содержать 8 и более символов")
+        if status_code == 3:
+            self.incorrect_dialog("Имя должно входить в диапозон от 4 до 49 символов")
+
     def del_user_dialog(self):
+        del_window = QWidget()
+        ui = Ui_ConfirmDelUserDialog()
+        ui.setupUi(del_window)
+
+        ui.confirm_button.clicked.connect(lambda: self.del_user_data())
+        ui.cancel_button.clicked.connect(lambda: del_window.close())
+
+        del_window.show()
+        del_window.exec()
+    
+    def del_user_data(self):
         from handler_db import Handler
         hand = Handler()
-        user = self
+        id = self.admin_ui.tableWidget.currentRow() + 1
         status_code = 0
+
+        status_code = hand.key_del_current_user(id)
+
+        if status_code == 0:
+            self.success_dialog('Еее')
+        if status_code == 1:
+            self.incorrect_dialog("Роли могут состоять из admin, manager, staff, client")
 
     def incorrect_dialog(self, massage):
         incorrect_window = QWidget()
