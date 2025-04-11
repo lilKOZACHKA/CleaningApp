@@ -1,4 +1,5 @@
 import sys
+from handler_db import Handler
 from PySide6.QtGui import QTabletEvent, QInputEvent
 from PySide6.QtCore import QEvent
 from PySide6.QtWidgets import QDialog, QWidget, QTableWidgetItem, QTableWidget
@@ -47,7 +48,6 @@ class AdminPanel(QDialog):
         add_user_window.exec()
     
     def add_new_user_data(self, ui):
-        from handler_db import Handler
         hand = Handler()
         username = ui.new_username_input.toPlainText()
         passw = ui.new_password_input.toPlainText()
@@ -55,6 +55,8 @@ class AdminPanel(QDialog):
         status_code = 0
 
         status_code = hand.key_add_new_user(username, passw, role)
+
+        self.upload_data()
 
         if status_code == 0:
             self.success_dialog('Еее')
@@ -64,6 +66,7 @@ class AdminPanel(QDialog):
             self.incorrect_dialog("Пароль должен содержать 8 и более символов")
         if status_code == 3:
             self.incorrect_dialog("Имя должно входить в диапозон от 4 до 49 символов")
+        self.upload_data()
 
     def change_user_dialog(self):
         change_window = QWidget()
@@ -87,6 +90,8 @@ class AdminPanel(QDialog):
 
         status_code = hand.key_change_current_user(id, username, passw, role, status)
 
+        self.upload_data()
+
         if status_code == 0:
             self.success_dialog('Еее')
         if status_code == 1:
@@ -95,6 +100,7 @@ class AdminPanel(QDialog):
             self.incorrect_dialog("Пароль должен содержать 8 и более символов")
         if status_code == 3:
             self.incorrect_dialog("Имя должно входить в диапозон от 4 до 49 символов")
+        self.upload_data()
 
     def del_user_dialog(self):
         del_window = QWidget()
@@ -108,17 +114,19 @@ class AdminPanel(QDialog):
         del_window.exec()
     
     def del_user_data(self):
-        from handler_db import Handler
         hand = Handler()
         id = self.admin_ui.tableWidget.currentRow() + 1
         status_code = 0
 
         status_code = hand.key_del_current_user(id)
 
+        self.upload_data()
+
         if status_code == 0:
             self.success_dialog('Еее')
         if status_code == 1:
             self.incorrect_dialog("Роли могут состоять из admin, manager, staff, client")
+        self.upload_data()
 
     def incorrect_dialog(self, massage):
         incorrect_window = QWidget()

@@ -93,6 +93,7 @@ class Handler():
                 if role == "admin" or role == "manager" or role == "staff" or role == "client":
                     cur.execute("INSERT INTO accounts (username, password_hash, role) VALUES (?, ?, ?)", (username, passw, role,))
                     conn.commit()
+                    handler.sort_id(conn, cur)
                     cur.close()
                     conn.close()
                     return 0
@@ -130,14 +131,17 @@ class Handler():
         cur = conn.cursor()
 
         cur.execute("DELETE FROM Accounts WHERE account_id = ?", (id,))
+        handler.sort_id(conn, cur)
+        cur.close()
+        conn.close()
+
+    def sort_id(handler, conn, cur):
         cur.execute("SELECT * FROM Accounts ORDER BY account_id")
         all_accounts = cur.fetchall()
         cur.execute("DELETE FROM Accounts")
         for new_id, account in enumerate(all_accounts, start=1):
             cur.execute("INSERT INTO Accounts (account_id, username, password_hash, role, account_status, login_attempts) VALUES (?, ?, ?, ?, ?, ?)", (new_id, *account[1:]))
             conn.commit()
-        cur.close()
-        conn.close()
         
 
 
