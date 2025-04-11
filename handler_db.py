@@ -1,5 +1,4 @@
 import sqlite3, sys
-import AuthWindow
 
 class Handler():
     def key_autorization(handler, login, passw):

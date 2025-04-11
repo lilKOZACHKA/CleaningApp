@@ -4,8 +4,8 @@ from dialogs.ui_AutorizationDialog import Ui_AutorizationDiolog
 from dialogs.ui_IncorrectPassDialog import Ui_IncorrectPassDialog
 from dialogs.ui_SuccessAutorizeDialog import Ui_SuccessAutorizeDialog
 from dialogs.ui_BanDialog import Ui_BanDialog
-from admin_panel import AdminPanel
-from user_panel import UserPanel
+from admin_win import AdminPanel
+from user_win import UserPanel
 
 class Authorization(QDialog):
     def __init__(self):

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'BanDialogEAuyTy.ui'
+## Form generated from reading UI file 'BanDialogzjuPzR.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.3
 ##
@@ -23,14 +23,25 @@ class Ui_BanDialog(object):
         if not BanDialog.objectName():
             BanDialog.setObjectName(u"BanDialog")
         BanDialog.resize(323, 165)
+        BanDialog.setStyleSheet(u"background-color:qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(81, 0, 135, 255), stop:0.427447 rgba(41, 61, 132, 235), stop:1 rgba(155, 79, 165, 255));\n"
+"\n"
+"")
         self.verticalLayout_2 = QVBoxLayout(BanDialog)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.widget = QWidget(BanDialog)
         self.widget.setObjectName(u"widget")
+        self.widget.setStyleSheet(u"background-color: rgba(255, 255, 255, 60);\n"
+"border: 1px solid  rgba(255, 255, 255, 90);\n"
+"border-radius: 7px;")
         self.verticalLayout = QVBoxLayout(self.widget)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.label = QLabel(self.widget)
         self.label.setObjectName(u"label")
+        self.label.setStyleSheet(u"color: white;\n"
+"font-weight: bold;\n"
+"font-size: 10pt;\n"
+"border: none;\n"
+"background: none;")
         self.label.setScaledContents(False)
         self.label.setAlignment(Qt.AlignCenter)
         self.label.setWordWrap(True)
@@ -39,6 +50,10 @@ class Ui_BanDialog(object):
 
         self.widget_2 = QWidget(self.widget)
         self.widget_2.setObjectName(u"widget_2")
+        self.widget_2.setStyleSheet(u"color: white;\n"
+"font-weight: bold;\n"
+"font-size: 10pt;\n"
+"border-radius: 7px;")
         self.horizontalLayout = QHBoxLayout(self.widget_2)
         self.horizontalLayout.setSpacing(0)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
@@ -46,6 +61,7 @@ class Ui_BanDialog(object):
         self.confirm_button = QPushButton(self.widget_2)
         self.confirm_button.setObjectName(u"confirm_button")
         self.confirm_button.setMinimumSize(QSize(25, 30))
+        self.confirm_button.setStyleSheet(u"")
 
         self.horizontalLayout.addWidget(self.confirm_button)
 
