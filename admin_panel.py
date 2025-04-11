@@ -52,19 +52,23 @@ class AdminPanel(QDialog):
         username = ui.new_username_input.toPlainText()
         passw = ui.new_password_input.toPlainText()
         role = ui.new_role_input.toPlainText()
+
         status_code = 0
 
         status_code = hand.key_add_new_user(username, passw, role)
 
         if status_code == 0:
-            self.success_dialog('Еее')
+            self.success_dialog('Пользователь добавлен')
+            self.del_user_data()
+            self.upload_data()
         if status_code == 1:
             self.incorrect_dialog("Роли могут состоять из admin, manager, staff, client")
         if status_code == 2:
             self.incorrect_dialog("Пароль должен содержать 8 и более символов")
         if status_code == 3:
             self.incorrect_dialog("Имя должно входить в диапозон от 4 до 49 символов")
-
+        self.del_user_data()
+        self.upload_data()
     def change_user_dialog(self):
         change_window = QWidget()
         ui = Ui_ChangeUserDialog()
@@ -88,7 +92,7 @@ class AdminPanel(QDialog):
         status_code = hand.key_change_current_user(id, username, passw, role, status)
 
         if status_code == 0:
-            self.success_dialog('Еее')
+            self.success_dialog('Пользователь добавлен')
         if status_code == 1:
             self.incorrect_dialog("Роли могут состоять из admin, manager, staff, client")
         if status_code == 2:
@@ -97,15 +101,15 @@ class AdminPanel(QDialog):
             self.incorrect_dialog("Имя должно входить в диапозон от 4 до 49 символов")
 
     def del_user_dialog(self):
-        del_window = QWidget()
+        self.del_window = QWidget()
         ui = Ui_ConfirmDelUserDialog()
-        ui.setupUi(del_window)
+        ui.setupUi(self.del_window)
 
         ui.confirm_button.clicked.connect(lambda: self.del_user_data())
-        ui.cancel_button.clicked.connect(lambda: del_window.close())
+        ui.cancel_button.clicked.connect(lambda:  self.del_window.close())
 
-        del_window.show()
-        del_window.exec()
+        self.del_window.show()
+        self.del_window.exec()
     
     def del_user_data(self):
         from handler_db import Handler
@@ -116,10 +120,11 @@ class AdminPanel(QDialog):
         status_code = hand.key_del_current_user(id)
 
         if status_code == 0:
-            self.success_dialog('Еее')
+            self.success_dialog('Пользователь удалён')
         if status_code == 1:
             self.incorrect_dialog("Роли могут состоять из admin, manager, staff, client")
-
+        self.upload_data()
+        self.del_window.close()
     def incorrect_dialog(self, massage):
         incorrect_window = QWidget()
         ui = Ui_IncorrectPassDialog()
