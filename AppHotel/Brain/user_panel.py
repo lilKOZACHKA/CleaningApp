@@ -1,5 +1,4 @@
-import sys
-from PySide6.QtWidgets import QDialog, QWidget
+from PySide6.QtWidgets import QDialog
 from AppHotel.UI.ui_ChangePassDialog import Ui_ChangePassDialog
 from AppHotel.UI.ui_IncorrectPassDialog import Ui_IncorrectPassDialog
 from AppHotel.UI.ui_SuccessAutorizeDialog import Ui_SuccessAutorizeDialog
@@ -46,8 +45,9 @@ class UserPanel(QDialog):
         else:
             self.incorrect_dialog("Старый пароль совпадает с новым, введите новый пароль")
 
-    def incorrect_dialog(self, message):
-        window = QWidget()
+    @staticmethod
+    def incorrect_dialog(message):
+        window = QDialog()
         ui = Ui_IncorrectPassDialog()
         ui.setupUi(window)
 
@@ -57,8 +57,9 @@ class UserPanel(QDialog):
         window.show()
         window.exec()
 
-    def success_dialog(self, message):
-        window = QWidget()
+    @staticmethod
+    def success_dialog(message):
+        window = QDialog()
         ui = Ui_SuccessAutorizeDialog()
         ui.setupUi(window)
 

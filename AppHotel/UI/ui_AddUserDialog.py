@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'AddUserDialogOiVJJX.ui'
+## Form generated from reading Brain file 'AddUserDialogOiVJJX.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.3
 ##
-## WARNING! All changes made in this file will be lost when recompiling UI file!
+## WARNING! All changes made in this file will be lost when recompiling Brain file!
 ################################################################################
 
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,

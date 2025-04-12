@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'ChangeUserDialogpCZscP.ui'
+## Form generated from reading UI file 'ChangeUserDialogQdVhGf.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.3
 ##
@@ -23,7 +23,7 @@ class Ui_ChangeUserDialog(object):
     def setupUi(self, ChangeUserDialog):
         if not ChangeUserDialog.objectName():
             ChangeUserDialog.setObjectName(u"ChangeUserDialog")
-        ChangeUserDialog.resize(323, 288)
+        ChangeUserDialog.resize(319, 288)
         ChangeUserDialog.setStyleSheet(u"background: qlineargradient(\n"
 "            x1:0, y1:0, x2:1, y2:1,\n"
 "            stop:0 #6D7B8D,  /* \u041f\u0440\u0438\u0433\u043b\u0443\u0448\u0435\u043d\u043d\u044b\u0439 \u0441\u0435\u0440\u043e-\u0433\u043e\u043b\u0443\u0431\u043e\u0439 */\n"
@@ -101,14 +101,16 @@ class Ui_ChangeUserDialog(object):
 
         self.new_status_input = QTextEdit(self.widget)
         self.new_status_input.setObjectName(u"new_status_input")
-        self.new_status_input.setEnabled(False)
+        self.new_status_input.setEnabled(True)
         self.new_status_input.setMaximumSize(QSize(400, 25))
         self.new_status_input.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
 "color: rgb(0, 0, 0);\n"
 "")
+        self.new_status_input.setInputMethodHints(Qt.InputMethodHint.ImhNone)
         self.new_status_input.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.new_status_input.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.new_status_input.setTabChangesFocus(True)
+        self.new_status_input.setAcceptRichText(False)
 
         self.verticalLayout.addWidget(self.new_status_input)
 

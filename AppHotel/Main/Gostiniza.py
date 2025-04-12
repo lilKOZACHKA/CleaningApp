@@ -1,11 +1,12 @@
-import sys, time
-from PySide6.QtWidgets import QDialog, QApplication, QWidget, QMainWindow
+import sys
+from PySide6.QtWidgets import QDialog, QApplication
 from AppHotel.UI.ui_AutorizationDialog import Ui_AutorizationDiolog
 from AppHotel.UI.ui_IncorrectPassDialog import Ui_IncorrectPassDialog
 from AppHotel.UI.ui_SuccessAutorizeDialog import Ui_SuccessAutorizeDialog
 from AppHotel.UI.ui_BanDialog import Ui_BanDialog
-from AppHotel.UI.admin_panel import AdminPanel
-from AppHotel.UI.user_panel import UserPanel
+from AppHotel.Brain.admin_panel import AdminPanel
+from AppHotel.Brain.user_panel import UserPanel
+
 
 class Authorization(QDialog):
     def __init__(self):
@@ -16,11 +17,10 @@ class Authorization(QDialog):
         self.autorize_ui.login_button.clicked.connect(lambda: self.validate_user_data())
 
     def validate_user_data(self):
-        from AppHotel.UI.Handle import Handler
+        from AppHotel.Brain.Handle import Handler
         hand = Handler()
         login = self.autorize_ui.login_input.toPlainText()
         passw = self.autorize_ui.password_input.toPlainText()
-        status_code = 0
 
         status_code = hand.key_autorization(login, passw)
 
@@ -32,55 +32,58 @@ class Authorization(QDialog):
         else:
             self.ban_dialog()
 
-    def incorrect_dialog(self):
-        window = QDialog()
+    @staticmethod
+    def incorrect_dialog():
+        incorwin = QDialog()
         ui = Ui_IncorrectPassDialog()
-        ui.setupUi(window)
+        ui.setupUi(incorwin)
 
-        ui.confirm_button.clicked.connect(lambda: window.close())
+        ui.confirm_button.clicked.connect(lambda: incorwin.close())
 
-        window.show()
-        window.exec()
+        incorwin.show()
+        incorwin.exec()
 
     def success_dialog(self, status_code):
-        window = QDialog()
+        successwin = QDialog()
         ui = Ui_SuccessAutorizeDialog()
-        ui.setupUi(window)
+        ui.setupUi(successwin)
 
-        ui.confirm_button.clicked.connect(lambda: self.confirm_and_switch_panel(status_code, window))
+        ui.confirm_button.clicked.connect(lambda: self.confirm_and_switch_panel(status_code, successwin))
 
-        window.show()
-        window.exec()
+        successwin.show()
+        successwin.exec()
 
-    def ban_dialog(self):
-        window = QDialog()
+    @staticmethod
+    def ban_dialog():
+        banwin = QDialog()
         ui = Ui_BanDialog()
-        ui.setupUi(window)
+        ui.setupUi(banwin)
 
-        ui.confirm_button.clicked.connect(lambda: window.close())
+        ui.confirm_button.clicked.connect(lambda: banwin.close())
 
-        window.show()
-        window.exec()
+        banwin.show()
+        banwin.exec()
 
-    def confirm_and_switch_panel(self, status_code, window):
+    def confirm_and_switch_panel(self, status_code, win):
         if status_code == 0:
-            self.open_admin_panel(window)
+            self.open_admin_panel(win)
         else:
-            self.open_user_panel(window)
+            self.open_user_panel(win)
 
-    def open_user_panel(self, window):
-        window.close()
+    def open_user_panel(self, win1):
+        win1.close()
         user_window = UserPanel()
         user_window.show()
         self.close()
         user_window.exec()
 
-    def open_admin_panel(self, window):
-        window.close()
+    def open_admin_panel(self, win3):
+        win3.close()
         admin_window = AdminPanel()
         admin_window.show()
         self.close()
         admin_window.exec()
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
