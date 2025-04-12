@@ -1,0 +1,575 @@
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading Brain file 'AdminDialogtUZizG.ui'
+##
+## Created by: Qt User Interface Compiler version 6.8.3
+##
+## WARNING! All changes made in this file will be lost when recompiling Brain file!
+################################################################################
+
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QAbstractItemView, QAbstractScrollArea, QApplication, QDialog,
+    QFormLayout, QFrame, QGridLayout, QHBoxLayout,
+    QHeaderView, QLayout, QPushButton, QSizePolicy,
+    QTabWidget, QTableWidget, QTableWidgetItem, QVBoxLayout,
+    QWidget)
+
+class Ui_AdminDialog(object):
+    def setupUi(self, AdminDialog):
+        if not AdminDialog.objectName():
+            AdminDialog.setObjectName(u"AdminDialog")
+        AdminDialog.resize(981, 573)
+        AdminDialog.setMinimumSize(QSize(700, 573))
+        palette = QPalette()
+        brush = QBrush(QColor(0, 0, 0, 255))
+        brush.setStyle(Qt.SolidPattern)
+        palette.setBrush(QPalette.Active, QPalette.WindowText, brush)
+        gradient = QLinearGradient(0, 0, 1, 1)
+        gradient.setSpread(QGradient.PadSpread)
+        gradient.setCoordinateMode(QGradient.ObjectBoundingMode)
+        gradient.setColorAt(0, QColor(109, 123, 141, 255))
+        gradient.setColorAt(1, QColor(74, 112, 139, 255))
+        brush1 = QBrush(gradient)
+        palette.setBrush(QPalette.Active, QPalette.Button, brush1)
+        brush2 = QBrush(QColor(255, 255, 255, 255))
+        brush2.setStyle(Qt.SolidPattern)
+        palette.setBrush(QPalette.Active, QPalette.Light, brush2)
+        palette.setBrush(QPalette.Active, QPalette.Midlight, brush2)
+        brush3 = QBrush(QColor(127, 127, 127, 255))
+        brush3.setStyle(Qt.SolidPattern)
+        palette.setBrush(QPalette.Active, QPalette.Dark, brush3)
+        brush4 = QBrush(QColor(170, 170, 170, 255))
+        brush4.setStyle(Qt.SolidPattern)
+        palette.setBrush(QPalette.Active, QPalette.Mid, brush4)
+        palette.setBrush(QPalette.Active, QPalette.Text, brush)
+        palette.setBrush(QPalette.Active, QPalette.BrightText, brush2)
+        palette.setBrush(QPalette.Active, QPalette.ButtonText, brush)
+        gradient1 = QLinearGradient(0, 0, 1, 1)
+        gradient1.setSpread(QGradient.PadSpread)
+        gradient1.setCoordinateMode(QGradient.ObjectBoundingMode)
+        gradient1.setColorAt(0, QColor(109, 123, 141, 255))
+        gradient1.setColorAt(1, QColor(74, 112, 139, 255))
+        brush5 = QBrush(gradient1)
+        palette.setBrush(QPalette.Active, QPalette.Base, brush5)
+        gradient2 = QLinearGradient(0, 0, 1, 1)
+        gradient2.setSpread(QGradient.PadSpread)
+        gradient2.setCoordinateMode(QGradient.ObjectBoundingMode)
+        gradient2.setColorAt(0, QColor(109, 123, 141, 255))
+        gradient2.setColorAt(1, QColor(74, 112, 139, 255))
+        brush6 = QBrush(gradient2)
+        palette.setBrush(QPalette.Active, QPalette.Window, brush6)
+        palette.setBrush(QPalette.Active, QPalette.Shadow, brush)
+        palette.setBrush(QPalette.Active, QPalette.AlternateBase, brush2)
+        brush7 = QBrush(QColor(255, 255, 220, 255))
+        brush7.setStyle(Qt.SolidPattern)
+        palette.setBrush(QPalette.Active, QPalette.ToolTipBase, brush7)
+        palette.setBrush(QPalette.Active, QPalette.ToolTipText, brush)
+        brush8 = QBrush(QColor(255, 255, 255, 128))
+        brush8.setStyle(Qt.SolidPattern)
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette.Active, QPalette.PlaceholderText, brush8)
+#endif
+        palette.setBrush(QPalette.Inactive, QPalette.WindowText, brush)
+        gradient3 = QLinearGradient(0, 0, 1, 1)
+        gradient3.setSpread(QGradient.PadSpread)
+        gradient3.setCoordinateMode(QGradient.ObjectBoundingMode)
+        gradient3.setColorAt(0, QColor(109, 123, 141, 255))
+        gradient3.setColorAt(1, QColor(74, 112, 139, 255))
+        brush9 = QBrush(gradient3)
+        palette.setBrush(QPalette.Inactive, QPalette.Button, brush9)
+        palette.setBrush(QPalette.Inactive, QPalette.Light, brush2)
+        palette.setBrush(QPalette.Inactive, QPalette.Midlight, brush2)
+        palette.setBrush(QPalette.Inactive, QPalette.Dark, brush3)
+        palette.setBrush(QPalette.Inactive, QPalette.Mid, brush4)
+        palette.setBrush(QPalette.Inactive, QPalette.Text, brush)
+        palette.setBrush(QPalette.Inactive, QPalette.BrightText, brush2)
+        palette.setBrush(QPalette.Inactive, QPalette.ButtonText, brush)
+        gradient4 = QLinearGradient(0, 0, 1, 1)
+        gradient4.setSpread(QGradient.PadSpread)
+        gradient4.setCoordinateMode(QGradient.ObjectBoundingMode)
+        gradient4.setColorAt(0, QColor(109, 123, 141, 255))
+        gradient4.setColorAt(1, QColor(74, 112, 139, 255))
+        brush10 = QBrush(gradient4)
+        palette.setBrush(QPalette.Inactive, QPalette.Base, brush10)
+        gradient5 = QLinearGradient(0, 0, 1, 1)
+        gradient5.setSpread(QGradient.PadSpread)
+        gradient5.setCoordinateMode(QGradient.ObjectBoundingMode)
+        gradient5.setColorAt(0, QColor(109, 123, 141, 255))
+        gradient5.setColorAt(1, QColor(74, 112, 139, 255))
+        brush11 = QBrush(gradient5)
+        palette.setBrush(QPalette.Inactive, QPalette.Window, brush11)
+        palette.setBrush(QPalette.Inactive, QPalette.Shadow, brush)
+        palette.setBrush(QPalette.Inactive, QPalette.AlternateBase, brush2)
+        palette.setBrush(QPalette.Inactive, QPalette.ToolTipBase, brush7)
+        palette.setBrush(QPalette.Inactive, QPalette.ToolTipText, brush)
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush8)
+#endif
+        palette.setBrush(QPalette.Disabled, QPalette.WindowText, brush3)
+        gradient6 = QLinearGradient(0, 0, 1, 1)
+        gradient6.setSpread(QGradient.PadSpread)
+        gradient6.setCoordinateMode(QGradient.ObjectBoundingMode)
+        gradient6.setColorAt(0, QColor(109, 123, 141, 255))
+        gradient6.setColorAt(1, QColor(74, 112, 139, 255))
+        brush12 = QBrush(gradient6)
+        palette.setBrush(QPalette.Disabled, QPalette.Button, brush12)
+        palette.setBrush(QPalette.Disabled, QPalette.Light, brush2)
+        palette.setBrush(QPalette.Disabled, QPalette.Midlight, brush2)
+        palette.setBrush(QPalette.Disabled, QPalette.Dark, brush3)
+        palette.setBrush(QPalette.Disabled, QPalette.Mid, brush4)
+        palette.setBrush(QPalette.Disabled, QPalette.Text, brush3)
+        palette.setBrush(QPalette.Disabled, QPalette.BrightText, brush2)
+        palette.setBrush(QPalette.Disabled, QPalette.ButtonText, brush3)
+        gradient7 = QLinearGradient(0, 0, 1, 1)
+        gradient7.setSpread(QGradient.PadSpread)
+        gradient7.setCoordinateMode(QGradient.ObjectBoundingMode)
+        gradient7.setColorAt(0, QColor(109, 123, 141, 255))
+        gradient7.setColorAt(1, QColor(74, 112, 139, 255))
+        brush13 = QBrush(gradient7)
+        palette.setBrush(QPalette.Disabled, QPalette.Base, brush13)
+        gradient8 = QLinearGradient(0, 0, 1, 1)
+        gradient8.setSpread(QGradient.PadSpread)
+        gradient8.setCoordinateMode(QGradient.ObjectBoundingMode)
+        gradient8.setColorAt(0, QColor(109, 123, 141, 255))
+        gradient8.setColorAt(1, QColor(74, 112, 139, 255))
+        brush14 = QBrush(gradient8)
+        palette.setBrush(QPalette.Disabled, QPalette.Window, brush14)
+        palette.setBrush(QPalette.Disabled, QPalette.Shadow, brush)
+        palette.setBrush(QPalette.Disabled, QPalette.AlternateBase, brush2)
+        palette.setBrush(QPalette.Disabled, QPalette.ToolTipBase, brush7)
+        palette.setBrush(QPalette.Disabled, QPalette.ToolTipText, brush)
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush8)
+#endif
+        AdminDialog.setPalette(palette)
+        font = QFont()
+        font.setPointSize(14)
+        font.setBold(False)
+        AdminDialog.setFont(font)
+        icon = QIcon(QIcon.fromTheme(QIcon.ThemeIcon.UserAvailable))
+        AdminDialog.setWindowIcon(icon)
+        AdminDialog.setWindowOpacity(1.000000000000000)
+        AdminDialog.setStyleSheet(u"QDialog {\n"
+"        background: qlineargradient(\n"
+"            x1:0, y1:0, x2:1, y2:1,\n"
+"            stop:0 #6D7B8D,  /* \u041f\u0440\u0438\u0433\u043b\u0443\u0448\u0435\u043d\u043d\u044b\u0439 \u0441\u0435\u0440\u043e-\u0433\u043e\u043b\u0443\u0431\u043e\u0439 */\n"
+"            stop:1 #4A708B   /* \u0422\u0435\u043c\u043d\u044b\u0439 \u0441\u0435\u0440\u043e-\u0441\u0438\u043d\u0438\u0439 */\n"
+"        );\n"
+"        color: white;  /* \u0426\u0432\u0435\u0442 \u0442\u0435\u043a\u0441\u0442\u0430 */\n"
+"    }")
+        self.gridLayout = QGridLayout(AdminDialog)
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.widget = QWidget(AdminDialog)
+        self.widget.setObjectName(u"widget")
+        self.widget.setMinimumSize(QSize(693, 555))
+        self.verticalLayout_2 = QVBoxLayout(self.widget)
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.tabWidget = QTabWidget(self.widget)
+        self.tabWidget.setObjectName(u"tabWidget")
+        self.tabWidget.setMinimumSize(QSize(684, 537))
+        font1 = QFont()
+        font1.setPointSize(11)
+        self.tabWidget.setFont(font1)
+        self.tabWidget.setStyleSheet(u"")
+        self.tabWidget.setTabPosition(QTabWidget.TabPosition.West)
+        self.tabWidget.setTabShape(QTabWidget.TabShape.Triangular)
+        self.tabWidget.setElideMode(Qt.TextElideMode.ElideNone)
+        self.tabWidget.setDocumentMode(False)
+        self.tabWidget.setMovable(True)
+        self.tab = QWidget()
+        self.tab.setObjectName(u"tab")
+        self.horizontalLayout = QHBoxLayout(self.tab)
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.formWidget = QWidget(self.tab)
+        self.formWidget.setObjectName(u"formWidget")
+        sizePolicy = QSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.formWidget.sizePolicy().hasHeightForWidth())
+        self.formWidget.setSizePolicy(sizePolicy)
+        self.formWidget.setMinimumSize(QSize(107, 443))
+        self.formWidget.setMaximumSize(QSize(443, 443))
+        font2 = QFont()
+        font2.setPointSize(10)
+        self.formWidget.setFont(font2)
+        self.formWidget.setStyleSheet(u"background: qlineargradient(\n"
+"            x1:0, y1:0, x2:1, y2:1,\n"
+"            stop:0 #6D7B8D,  /* \u041f\u0440\u0438\u0433\u043b\u0443\u0448\u0435\u043d\u043d\u044b\u0439 \u0441\u0435\u0440\u043e-\u0433\u043e\u043b\u0443\u0431\u043e\u0439 */\n"
+"            stop:1 #4A708B   /* \u0422\u0435\u043c\u043d\u044b\u0439 \u0441\u0435\u0440\u043e-\u0441\u0438\u043d\u0438\u0439 */)")
+        self.formLayout = QFormLayout(self.formWidget)
+        self.formLayout.setObjectName(u"formLayout")
+        self.add_new_user_button = QPushButton(self.formWidget)
+        self.add_new_user_button.setObjectName(u"add_new_user_button")
+        self.add_new_user_button.setMinimumSize(QSize(103, 30))
+        font3 = QFont()
+        font3.setBold(True)
+        self.add_new_user_button.setFont(font3)
+        self.add_new_user_button.setStyleSheet(u"QPushButton {\n"
+"        background: #5D6D7E;  /* \u0421\u0435\u0440\u043e-\u0441\u0438\u043d\u0438\u0439 */\n"
+"        border: 1px solid #4A708B;\n"
+"        color: white;\n"
+"        padding: 8px 16px;\n"
+"        border-radius: 8px;\n"
+"        font-size: 14px;\n"
+"	border-color: rgb(255, 255, 255);\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background: #6D7B8D;  /* \u0421\u0432\u0435\u0442\u043b\u0435\u0435 \u043f\u0440\u0438 \u043d\u0430\u0432\u0435\u0434\u0435\u043d\u0438\u0438 */\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background: #4A708B;  /* \u0422\u0435\u043c\u043d\u0435\u0435 \u043f\u0440\u0438 \u043d\u0430\u0436\u0430\u0442\u0438\u0438 */\n"
+"    }\n"
+"")
+
+        self.formLayout.setWidget(1, QFormLayout.LabelRole, self.add_new_user_button)
+
+        self.change_user_button = QPushButton(self.formWidget)
+        self.change_user_button.setObjectName(u"change_user_button")
+        self.change_user_button.setMinimumSize(QSize(103, 30))
+        self.change_user_button.setFont(font3)
+        self.change_user_button.setStyleSheet(u"QPushButton {\n"
+"        background: #5D6D7E;  /* \u0421\u0435\u0440\u043e-\u0441\u0438\u043d\u0438\u0439 */\n"
+"        border: 1px solid #4A708B;\n"
+"        color: white;\n"
+"        padding: 8px 16px;\n"
+"        border-radius: 8px;\n"
+"        font-size: 14px;\n"
+"	border-color: rgb(255, 255, 255);\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background: #6D7B8D;  /* \u0421\u0432\u0435\u0442\u043b\u0435\u0435 \u043f\u0440\u0438 \u043d\u0430\u0432\u0435\u0434\u0435\u043d\u0438\u0438 */\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background: #4A708B;  /* \u0422\u0435\u043c\u043d\u0435\u0435 \u043f\u0440\u0438 \u043d\u0430\u0436\u0430\u0442\u0438\u0438 */\n"
+"    }\n"
+"")
+
+        self.formLayout.setWidget(2, QFormLayout.LabelRole, self.change_user_button)
+
+        self.refresh_tablet_button = QPushButton(self.formWidget)
+        self.refresh_tablet_button.setObjectName(u"refresh_tablet_button")
+        self.refresh_tablet_button.setMinimumSize(QSize(103, 30))
+        self.refresh_tablet_button.setFont(font3)
+        self.refresh_tablet_button.setStyleSheet(u"QPushButton {\n"
+"        background: #5D6D7E;  /* \u0421\u0435\u0440\u043e-\u0441\u0438\u043d\u0438\u0439 */\n"
+"        border: 1px solid #4A708B;\n"
+"        color: white;\n"
+"        padding: 8px 16px;\n"
+"        border-radius: 8px;\n"
+"        font-size: 14px;\n"
+"	border-color: rgb(255, 255, 255);\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background: #6D7B8D;  /* \u0421\u0432\u0435\u0442\u043b\u0435\u0435 \u043f\u0440\u0438 \u043d\u0430\u0432\u0435\u0434\u0435\u043d\u0438\u0438 */\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background: #4A708B;  /* \u0422\u0435\u043c\u043d\u0435\u0435 \u043f\u0440\u0438 \u043d\u0430\u0436\u0430\u0442\u0438\u0438 */\n"
+"    }\n"
+"")
+
+        self.formLayout.setWidget(3, QFormLayout.LabelRole, self.refresh_tablet_button)
+
+        self.del_user_button = QPushButton(self.formWidget)
+        self.del_user_button.setObjectName(u"del_user_button")
+        self.del_user_button.setMinimumSize(QSize(103, 30))
+        self.del_user_button.setFont(font3)
+        self.del_user_button.setStyleSheet(u"QPushButton {\n"
+"        background: #5D6D7E;  /* \u0421\u0435\u0440\u043e-\u0441\u0438\u043d\u0438\u0439 */\n"
+"        border: 1px solid #4A708B;\n"
+"        color: white;\n"
+"        padding: 8px 16px;\n"
+"        border-radius: 8px;\n"
+"        font-size: 14px;\n"
+"	border-color: rgb(255, 255, 255);\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background: #6D7B8D;  /* \u0421\u0432\u0435\u0442\u043b\u0435\u0435 \u043f\u0440\u0438 \u043d\u0430\u0432\u0435\u0434\u0435\u043d\u0438\u0438 */\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background: #4A708B;  /* \u0422\u0435\u043c\u043d\u0435\u0435 \u043f\u0440\u0438 \u043d\u0430\u0436\u0430\u0442\u0438\u0438 */\n"
+"    }\n"
+"")
+
+        self.formLayout.setWidget(6, QFormLayout.LabelRole, self.del_user_button)
+
+
+        self.horizontalLayout.addWidget(self.formWidget)
+
+        self.widget_2 = QWidget(self.tab)
+        self.widget_2.setObjectName(u"widget_2")
+        self.verticalLayout = QVBoxLayout(self.widget_2)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.widget_3 = QWidget(self.widget_2)
+        self.widget_3.setObjectName(u"widget_3")
+        self.verticalLayout_4 = QVBoxLayout(self.widget_3)
+        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+        self.tableWidget = QTableWidget(self.widget_3)
+        if (self.tableWidget.columnCount() < 5):
+            self.tableWidget.setColumnCount(5)
+        font4 = QFont()
+        font4.setPointSize(8)
+        __qtablewidgetitem = QTableWidgetItem()
+        __qtablewidgetitem.setFont(font4);
+        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        __qtablewidgetitem3.setFont(font2);
+        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        __qtablewidgetitem4 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(4, __qtablewidgetitem4)
+        self.tableWidget.setObjectName(u"tableWidget")
+        self.tableWidget.setMinimumSize(QSize(502, 288))
+        self.tableWidget.setStyleSheet(u"")
+        self.tableWidget.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAsNeeded)
+        self.tableWidget.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
+        self.tableWidget.setGridStyle(Qt.PenStyle.SolidLine)
+        self.tableWidget.horizontalHeader().setCascadingSectionResizes(True)
+        self.tableWidget.horizontalHeader().setProperty(u"showSortIndicator", False)
+        self.tableWidget.verticalHeader().setCascadingSectionResizes(True)
+
+        self.verticalLayout_4.addWidget(self.tableWidget)
+
+
+        self.verticalLayout.addWidget(self.widget_3)
+
+
+        self.horizontalLayout.addWidget(self.widget_2)
+
+        self.tabWidget.addTab(self.tab, "")
+        self.tab_2 = QWidget()
+        self.tab_2.setObjectName(u"tab_2")
+        self.widget_8 = QWidget(self.tab_2)
+        self.widget_8.setObjectName(u"widget_8")
+        self.widget_8.setGeometry(QRect(144, 7, 771, 489))
+        sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
+        sizePolicy1.setHorizontalStretch(0)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.widget_8.sizePolicy().hasHeightForWidth())
+        self.widget_8.setSizePolicy(sizePolicy1)
+        self.verticalLayout_10 = QVBoxLayout(self.widget_8)
+        self.verticalLayout_10.setObjectName(u"verticalLayout_10")
+        self.verticalLayout_10.setSizeConstraint(QLayout.SizeConstraint.SetDefaultConstraint)
+        self.verticalLayout_10.setContentsMargins(0, 9, -1, -1)
+        self.widget_10 = QWidget(self.widget_8)
+        self.widget_10.setObjectName(u"widget_10")
+        sizePolicy1.setHeightForWidth(self.widget_10.sizePolicy().hasHeightForWidth())
+        self.widget_10.setSizePolicy(sizePolicy1)
+        self.widget_10.setMinimumSize(QSize(0, 0))
+        self.verticalLayout_11 = QVBoxLayout(self.widget_10)
+        self.verticalLayout_11.setObjectName(u"verticalLayout_11")
+        self.verticalLayout_11.setSizeConstraint(QLayout.SizeConstraint.SetDefaultConstraint)
+        self.verticalLayout_11.setContentsMargins(9, -1, -1, -1)
+        self.tableWidget_1 = QTableWidget(self.widget_10)
+        if (self.tableWidget_1.columnCount() < 6):
+            self.tableWidget_1.setColumnCount(6)
+        __qtablewidgetitem5 = QTableWidgetItem()
+        __qtablewidgetitem5.setFont(font4);
+        self.tableWidget_1.setHorizontalHeaderItem(0, __qtablewidgetitem5)
+        __qtablewidgetitem6 = QTableWidgetItem()
+        self.tableWidget_1.setHorizontalHeaderItem(1, __qtablewidgetitem6)
+        __qtablewidgetitem7 = QTableWidgetItem()
+        self.tableWidget_1.setHorizontalHeaderItem(2, __qtablewidgetitem7)
+        __qtablewidgetitem8 = QTableWidgetItem()
+        self.tableWidget_1.setHorizontalHeaderItem(3, __qtablewidgetitem8)
+        __qtablewidgetitem9 = QTableWidgetItem()
+        __qtablewidgetitem9.setFont(font2);
+        self.tableWidget_1.setHorizontalHeaderItem(4, __qtablewidgetitem9)
+        __qtablewidgetitem10 = QTableWidgetItem()
+        self.tableWidget_1.setHorizontalHeaderItem(5, __qtablewidgetitem10)
+        self.tableWidget_1.setObjectName(u"tableWidget_1")
+        self.tableWidget_1.setMinimumSize(QSize(502, 309))
+        self.tableWidget_1.setSizeIncrement(QSize(502, 0))
+        self.tableWidget_1.setFocusPolicy(Qt.FocusPolicy.StrongFocus)
+        self.tableWidget_1.setContextMenuPolicy(Qt.ContextMenuPolicy.DefaultContextMenu)
+        self.tableWidget_1.setStyleSheet(u"")
+        self.tableWidget_1.setFrameShape(QFrame.Shape.StyledPanel)
+        self.tableWidget_1.setFrameShadow(QFrame.Shadow.Sunken)
+        self.tableWidget_1.setLineWidth(1)
+        self.tableWidget_1.setMidLineWidth(0)
+        self.tableWidget_1.setSizeAdjustPolicy(QAbstractScrollArea.SizeAdjustPolicy.AdjustToContents)
+        self.tableWidget_1.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
+        self.tableWidget_1.setGridStyle(Qt.PenStyle.SolidLine)
+        self.tableWidget_1.setSortingEnabled(False)
+        self.tableWidget_1.setCornerButtonEnabled(True)
+        self.tableWidget_1.horizontalHeader().setVisible(True)
+        self.tableWidget_1.horizontalHeader().setCascadingSectionResizes(True)
+        self.tableWidget_1.horizontalHeader().setMinimumSectionSize(19)
+        self.tableWidget_1.horizontalHeader().setDefaultSectionSize(120)
+        self.tableWidget_1.horizontalHeader().setHighlightSections(True)
+        self.tableWidget_1.horizontalHeader().setProperty(u"showSortIndicator", False)
+        self.tableWidget_1.verticalHeader().setCascadingSectionResizes(True)
+        self.tableWidget_1.verticalHeader().setMinimumSectionSize(27)
+        self.tableWidget_1.verticalHeader().setDefaultSectionSize(25)
+        self.tableWidget_1.verticalHeader().setProperty(u"showSortIndicator", False)
+        self.tableWidget_1.verticalHeader().setStretchLastSection(False)
+
+        self.verticalLayout_11.addWidget(self.tableWidget_1)
+
+
+        self.verticalLayout_10.addWidget(self.widget_10)
+
+        self.formWidget1 = QWidget(self.tab_2)
+        self.formWidget1.setObjectName(u"formWidget1")
+        self.formWidget1.setGeometry(QRect(10, 30, 128, 443))
+        self.formWidget1.setMinimumSize(QSize(107, 443))
+        self.formWidget1.setMaximumSize(QSize(443, 443))
+        self.formWidget1.setStyleSheet(u"background: qlineargradient(\n"
+"            x1:0, y1:0, x2:1, y2:1,\n"
+"            stop:0 #6D7B8D,  /* \u041f\u0440\u0438\u0433\u043b\u0443\u0448\u0435\u043d\u043d\u044b\u0439 \u0441\u0435\u0440\u043e-\u0433\u043e\u043b\u0443\u0431\u043e\u0439 */\n"
+"            stop:1 #4A708B   /* \u0422\u0435\u043c\u043d\u044b\u0439 \u0441\u0435\u0440\u043e-\u0441\u0438\u043d\u0438\u0439 */)")
+        self.formLayout_5 = QFormLayout(self.formWidget1)
+        self.formLayout_5.setObjectName(u"formLayout_5")
+        self.add_new_user_button_1 = QPushButton(self.formWidget1)
+        self.add_new_user_button_1.setObjectName(u"add_new_user_button_1")
+        self.add_new_user_button_1.setMinimumSize(QSize(103, 30))
+        self.add_new_user_button_1.setFont(font3)
+        self.add_new_user_button_1.setStyleSheet(u"QPushButton {\n"
+"        background: #5D6D7E;  /* \u0421\u0435\u0440\u043e-\u0441\u0438\u043d\u0438\u0439 */\n"
+"        border: 1px solid #4A708B;\n"
+"        color: white;\n"
+"        padding: 8px 16px;\n"
+"        border-radius: 8px;\n"
+"        font-size: 14px;\n"
+"	border-color: rgb(255, 255, 255);\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background: #6D7B8D;  /* \u0421\u0432\u0435\u0442\u043b\u0435\u0435 \u043f\u0440\u0438 \u043d\u0430\u0432\u0435\u0434\u0435\u043d\u0438\u0438 */\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background: #4A708B;  /* \u0422\u0435\u043c\u043d\u0435\u0435 \u043f\u0440\u0438 \u043d\u0430\u0436\u0430\u0442\u0438\u0438 */\n"
+"    }\n"
+"")
+
+        self.formLayout_5.setWidget(1, QFormLayout.LabelRole, self.add_new_user_button_1)
+
+        self.change_user_button_1 = QPushButton(self.formWidget1)
+        self.change_user_button_1.setObjectName(u"change_user_button_1")
+        self.change_user_button_1.setMinimumSize(QSize(103, 30))
+        self.change_user_button_1.setFont(font3)
+        self.change_user_button_1.setStyleSheet(u"QPushButton {\n"
+"        background: #5D6D7E;  /* \u0421\u0435\u0440\u043e-\u0441\u0438\u043d\u0438\u0439 */\n"
+"        border: 1px solid #4A708B;\n"
+"        color: white;\n"
+"        padding: 8px 16px;\n"
+"        border-radius: 8px;\n"
+"        font-size: 14px;\n"
+"	border-color: rgb(255, 255, 255);\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background: #6D7B8D;  /* \u0421\u0432\u0435\u0442\u043b\u0435\u0435 \u043f\u0440\u0438 \u043d\u0430\u0432\u0435\u0434\u0435\u043d\u0438\u0438 */\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background: #4A708B;  /* \u0422\u0435\u043c\u043d\u0435\u0435 \u043f\u0440\u0438 \u043d\u0430\u0436\u0430\u0442\u0438\u0438 */\n"
+"    }\n"
+"")
+
+        self.formLayout_5.setWidget(2, QFormLayout.LabelRole, self.change_user_button_1)
+
+        self.refresh_tablet_button_1 = QPushButton(self.formWidget1)
+        self.refresh_tablet_button_1.setObjectName(u"refresh_tablet_button_1")
+        self.refresh_tablet_button_1.setMinimumSize(QSize(103, 30))
+        self.refresh_tablet_button_1.setFont(font3)
+        self.refresh_tablet_button_1.setStyleSheet(u"QPushButton {\n"
+"        background: #5D6D7E;  /* \u0421\u0435\u0440\u043e-\u0441\u0438\u043d\u0438\u0439 */\n"
+"        border: 1px solid #4A708B;\n"
+"        color: white;\n"
+"        padding: 8px 16px;\n"
+"        border-radius: 8px;\n"
+"        font-size: 14px;\n"
+"	border-color: rgb(255, 255, 255);\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background: #6D7B8D;  /* \u0421\u0432\u0435\u0442\u043b\u0435\u0435 \u043f\u0440\u0438 \u043d\u0430\u0432\u0435\u0434\u0435\u043d\u0438\u0438 */\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background: #4A708B;  /* \u0422\u0435\u043c\u043d\u0435\u0435 \u043f\u0440\u0438 \u043d\u0430\u0436\u0430\u0442\u0438\u0438 */\n"
+"    }\n"
+"")
+
+        self.formLayout_5.setWidget(3, QFormLayout.LabelRole, self.refresh_tablet_button_1)
+
+        self.del_user_button_1 = QPushButton(self.formWidget1)
+        self.del_user_button_1.setObjectName(u"del_user_button_1")
+        self.del_user_button_1.setMinimumSize(QSize(103, 30))
+        self.del_user_button_1.setFont(font3)
+        self.del_user_button_1.setStyleSheet(u"QPushButton {\n"
+"        background: #5D6D7E;  /* \u0421\u0435\u0440\u043e-\u0441\u0438\u043d\u0438\u0439 */\n"
+"        border: 1px solid #4A708B;\n"
+"        color: white;\n"
+"        padding: 8px 16px;\n"
+"        border-radius: 8px;\n"
+"        font-size: 14px;\n"
+"	border-color: rgb(255, 255, 255);\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background: #6D7B8D;  /* \u0421\u0432\u0435\u0442\u043b\u0435\u0435 \u043f\u0440\u0438 \u043d\u0430\u0432\u0435\u0434\u0435\u043d\u0438\u0438 */\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background: #4A708B;  /* \u0422\u0435\u043c\u043d\u0435\u0435 \u043f\u0440\u0438 \u043d\u0430\u0436\u0430\u0442\u0438\u0438 */\n"
+"    }\n"
+"")
+
+        self.formLayout_5.setWidget(6, QFormLayout.LabelRole, self.del_user_button_1)
+
+        self.tabWidget.addTab(self.tab_2, "")
+
+        self.verticalLayout_2.addWidget(self.tabWidget)
+
+
+        self.gridLayout.addWidget(self.widget, 0, 0, 1, 1)
+
+
+        self.retranslateUi(AdminDialog)
+
+        self.tabWidget.setCurrentIndex(0)
+
+
+        QMetaObject.connectSlotsByName(AdminDialog)
+    # setupUi
+
+    def retranslateUi(self, AdminDialog):
+        AdminDialog.setWindowTitle(QCoreApplication.translate("AdminDialog", u"\u0410\u0434\u043c\u0438\u043d-\u043f\u0430\u043d\u0435\u043b\u044c", None))
+        self.add_new_user_button.setText(QCoreApplication.translate("AdminDialog", u"\u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c", None))
+        self.change_user_button.setText(QCoreApplication.translate("AdminDialog", u"\u0418\u0437\u043c\u0435\u043d\u0438\u0442\u044c", None))
+        self.refresh_tablet_button.setText(QCoreApplication.translate("AdminDialog", u"\u041e\u0431\u043d\u043e\u0432\u0438\u0442\u044c", None))
+        self.del_user_button.setText(QCoreApplication.translate("AdminDialog", u"\u0423\u0434\u0430\u043b\u0438\u0442\u044c", None))
+        ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("AdminDialog", u"\u041d\u043e\u043c\u0435\u0440 \u0430\u043a\u043a\u0430\u0443\u043d\u0442\u0430", None));
+        ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("AdminDialog", u"\u041b\u043e\u0433\u0438\u043d", None));
+        ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("AdminDialog", u"\u041f\u0430\u0440\u043e\u043b\u044c", None));
+        ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("AdminDialog", u"\u0420\u043e\u043b\u044c", None));
+        ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(4)
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("AdminDialog", u"\u0421\u0442\u0430\u0442\u0443\u0441", None));
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QCoreApplication.translate("AdminDialog", u"\u0410\u043a\u043a\u0430\u0443\u043d\u0442\u044b", None))
+        ___qtablewidgetitem5 = self.tableWidget_1.horizontalHeaderItem(0)
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("AdminDialog", u"\u041d\u043e\u043c\u0435\u0440 \u041a\u043b\u0438\u0435\u043d\u0442\u0430", None));
+        ___qtablewidgetitem6 = self.tableWidget_1.horizontalHeaderItem(1)
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("AdminDialog", u"\u041b\u043e\u0433\u0438\u043d", None));
+        ___qtablewidgetitem7 = self.tableWidget_1.horizontalHeaderItem(2)
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("AdminDialog", u"\u0418\u043c\u044f", None));
+        ___qtablewidgetitem8 = self.tableWidget_1.horizontalHeaderItem(3)
+        ___qtablewidgetitem8.setText(QCoreApplication.translate("AdminDialog", u"\u0424\u0430\u043c\u0438\u043b\u0438\u044f", None));
+        ___qtablewidgetitem9 = self.tableWidget_1.horizontalHeaderItem(4)
+        ___qtablewidgetitem9.setText(QCoreApplication.translate("AdminDialog", u"\u041d\u043e\u043c\u0435\u0440 \u0442\u0435\u043b\u0435\u0444\u043e\u043d\u0430", None));
+        ___qtablewidgetitem10 = self.tableWidget_1.horizontalHeaderItem(5)
+        ___qtablewidgetitem10.setText(QCoreApplication.translate("AdminDialog", u"email", None));
+        self.add_new_user_button_1.setText(QCoreApplication.translate("AdminDialog", u"\u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c", None))
+        self.change_user_button_1.setText(QCoreApplication.translate("AdminDialog", u"\u0418\u0437\u043c\u0435\u043d\u0438\u0442\u044c", None))
+        self.refresh_tablet_button_1.setText(QCoreApplication.translate("AdminDialog", u"\u041e\u0431\u043d\u043e\u0432\u0438\u0442\u044c", None))
+        self.del_user_button_1.setText(QCoreApplication.translate("AdminDialog", u"\u0423\u0434\u0430\u043b\u0438\u0442\u044c", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("AdminDialog", u"\u041a\u043b\u0438\u0435\u043d\u0442\u044b", None))
+    # retranslateUi
+

@@ -1,11 +1,11 @@
 import sys
 from PySide6.QtWidgets import QDialog, QApplication
-from AppHotel.UI.ui_AutorizationDialog import Ui_AutorizationDiolog
-from AppHotel.UI.ui_IncorrectPassDialog import Ui_IncorrectPassDialog
-from AppHotel.UI.ui_SuccessAutorizeDialog import Ui_SuccessAutorizeDialog
-from AppHotel.UI.ui_BanDialog import Ui_BanDialog
-from AppHotel.Brain.admin_panel import AdminPanel
-from AppHotel.Brain.user_panel import UserPanel
+from AppHotel.UI.AuthDialog import Ui_AutorizationDiolog
+from AppHotel.UI.IncorrectPassDialog import Ui_IncorrectPassDialog
+from AppHotel.UI.SuccessAutorizeDialog import Ui_SuccessAutorizeDialog
+from AppHotel.UI.BanDialog import Ui_BanDialog
+from AppHotel.Brain.admin import AdminPanel
+from AppHotel.Brain.user import UserPanel
 
 
 class Authorization(QDialog):

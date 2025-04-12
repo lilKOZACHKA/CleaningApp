@@ -4,7 +4,7 @@ import sqlite3
 class Handler:
     @staticmethod
     def key_autorization(login, passw):
-        conn = sqlite3.connect('Guest.db')
+        conn = sqlite3.connect('Gostiniza.db')
         cur = conn.cursor()
 
         cur.execute("SELECT * FROM Accounts WHERE username = ?", (login,))
@@ -35,7 +35,7 @@ class Handler:
 
     @staticmethod
     def key_check_user_type(login):
-        conn = sqlite3.connect('Guest.db')
+        conn = sqlite3.connect('Gostiniza.db')
         cur = conn.cursor()
 
         cur.execute("SELECT * FROM Accounts WHERE username = ?", (login,))
@@ -56,7 +56,7 @@ class Handler:
 
     @staticmethod
     def key_change_user_password(old_passw, new_passw, conf_new_passw):
-        conn = sqlite3.connect('Guest.db')
+        conn = sqlite3.connect('Gostiniza.db')
         cur = conn.cursor()
 
         cur.execute("SELECT * FROM Accounts WHERE password_hash = ?", (old_passw,))
@@ -90,7 +90,7 @@ class Handler:
 
     @staticmethod
     def key_add_new_user(username, passw, role):
-        conn = sqlite3.connect('Guest.db')
+        conn = sqlite3.connect('Gostiniza.db')
         cur = conn.cursor()
 
         if 3 < len(username) < 50:
@@ -111,7 +111,7 @@ class Handler:
 
     @staticmethod
     def key_change_current_user(id, username, passw, role, status):
-        conn = sqlite3.connect('Guest.db')
+        conn = sqlite3.connect('Gostiniza.db')
         cur = conn.cursor()
 
         cur.execute("SELECT * FROM Accounts WHERE account_id = ?", (id,))
@@ -133,7 +133,7 @@ class Handler:
 
     @staticmethod
     def key_del_current_user(id):
-        conn = sqlite3.connect('Guest.db')
+        conn = sqlite3.connect('Gostiniza.db')
         cur = conn.cursor()
 
         cur.execute("DELETE FROM Accounts WHERE account_id = ?", (id,))
@@ -149,7 +149,7 @@ class Handler:
 
     @staticmethod
     def key_del_current_client(id):
-        conn = sqlite3.connect('Guest.db')
+        conn = sqlite3.connect('Gostiniza.db')
         cur = conn.cursor()
 
         cur.execute("DELETE FROM Clients WHERE client_id = ?", (id,))
